@@ -1,0 +1,71 @@
+                                                               Git Commands-day-1
+                                                               ==================
+----------------
+1.config & setup
+----------------
+git config --global user.name "your Name" = set your name for commits
+git config --global user.email "your email" = = set your email for commits
+git config --list = view current config settings
+git init = initialize a new git repo
+git clone <repo-url> = clone an existing repo
+
+---------------
+2.view history
+---------------
+git diff = view unstaged changes
+git status = it gives file names that are changed
+git log = view commit history
+
+--------------------
+3.working with files
+--------------------
+git add <file>= these files will be added from local to stage
+git add . = all files
+git reset <file> = unstage a file before commit
+git reset --hard = everything 
+git show <commit-hash> = view details of a specific commit
+git commit -m "new msg" = commit staged changes with a msg
+git commit --amend -m "new msg" = modify last commit msg
+
+---------------------
+4.branching & merging 
+---------------------
+git push - push from stage to remote
+git pull -merge changes git 
+git branch = list all branches
+git branch <branch-name> = create a new branch
+git checkout <branch-name> = switch to diff branch
+git checkout -b <branch-name> = create and switch to new branch
+git merge <branch-name> = merge another branch into current branch
+git branch -d <branch-name> = delete a local branch 
+git push origin --delete <branch-name> = delete a remote branch
+
+---------------------
+5.remote repositories
+----------------------
+1)list remote repositories = git remove -v
+2)to map local repo to remote repo = git remote add origin <repo-url>
+3)push changes to the remote repo = git push origin <branch-name>
+4)force push changes (overwrites remote history) = git push --force 
+5)fetch and merge changes from remote repo
+6)fetch remote changes without merging = git fetch origin
+
+-----------------
+steps to follow
+-----------------
+git init
+
+git remote add origin ...
+
+git branch -M main
+
+git pull --rebase origin main
+
+git push -u origin main
+
+from next onwards------
+git add .
+git commit -m "Your update message"
+git push
+
+
